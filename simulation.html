@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Hydraulic Simulation</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Advanced Hydraulic Transient Simulation</h1>
+  </header>
+
+  <main>
+    <form id="simulation-form">
+      <label for="systemType">System Type:</label>
+      <select id="systemType" required>
+        <option value="hydropower">Hydropower System</option>
+        <option value="pumpedStorage">Pumped Storage System</option>
+        <option value="other">Other</option>
+      </select><br>
+
+      <label for="pipeLength">Pipe Length (m):</label>
+      <input type="number" id="pipeLength" required><br>
+
+      <label for="pipeDiameter">Pipe Diameter (m):</label>
+      <input type="number" id="pipeDiameter" required><br>
+
+      <label for="valveClosureTime">Valve Closure Time (s):</label>
+      <input type="number" id="valveClosureTime" required><br>
+
+      <label for="initialFlowRate">Initial Flow Rate (m³/s):</label>
+      <input type="number" id="initialFlowRate" required><br>
+
+      <button type="submit">Run Simulation</button>
+    </form>
+
+    <div id="message"></div>
+  </main>
+
+  <script src="simulation.js"></script>
+</body>
+</html>
